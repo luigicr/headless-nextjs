@@ -1,6 +1,8 @@
-const { withContentlayer } = require('next-contentlayer')
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    remotePatterns: ['images.ctfassets.net'],
+  },
+}
 
-module.exports = withContentlayer(nextConfig)
+module.exports = nextConfig
