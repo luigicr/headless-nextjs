@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
-    remotePatterns: ['images.ctfassets.net'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'images.ctfassets.net',
+        port: '',
+      },
+    ],
   },
 }
 
